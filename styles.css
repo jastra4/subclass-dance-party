@@ -27,7 +27,7 @@ body, a:link, a:visited, a:active{
 }
 
 .purple{
-  border:10px solid red;
+  border:10px solid purple;
   border-radius:10px;
   position:absolute;
 }
