@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url(https://pbs.twimg.com/media/B1TGBQNCEAAEDCz.jpg:large);
+  /*background-color: white;*/
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -27,7 +28,12 @@ body, a:link, a:visited, a:active{
 }
 
 .purple{
-  border:10px solid purple;
+  /*border:10px solid purple;*/
   border-radius:10px;
   position:absolute;
+}
+
+#lady {
+  height: 200px;
+  width: 200px;
 }
