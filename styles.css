@@ -67,6 +67,9 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+.reaction {
+  background-color: black
+}
 
 #banner {
   margin: 0px;

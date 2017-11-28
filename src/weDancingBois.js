@@ -11,7 +11,7 @@ Shaker.prototype = Object.create(MakeDancer.prototype);
 Shaker.prototype.constructor = Shaker;
 
 Shaker.prototype.step = function() {
-  console.log('clicked');  
+  //console.log('clicked');  
   // call the old version of step at the beginning of any call to this new version of step
   //console.log('test');
   MakeDancer.prototype.step.call(this);

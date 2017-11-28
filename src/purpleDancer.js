@@ -11,7 +11,7 @@ MakePurpleDancer.prototype = Object.create(MakeDancer.prototype);
 MakePurpleDancer.prototype.constructor = MakePurpleDancer;
 
 MakePurpleDancer.prototype.step = function() {
-  console.log('clicked');  
+ // console.log('clicked');  
   // call the old version of step at the beginning of any call to this new version of step
   //console.log('test');
   MakeDancer.prototype.step.call(this);

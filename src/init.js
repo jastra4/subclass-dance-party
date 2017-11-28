@@ -7,12 +7,16 @@ $(document).ready(function() {
     $('.delete').remove();
   });
 
-  $('.lineUp').on('mouseover', function(event) {
-
+  $('span').on('click', function(event) {
+    console.log('test');
+    $('span').toggleClass('reaction');
+  });
+  $('.purple').on('mouseleave', function(event) {
+    $(this).toggleClass('reaction');
   });
 
   $('.lineUp').on('click', function(event) {
-    console.log($('body').width());
+    //console.log($('body').width());
     var spread = $(window).width() / (window.dancers.length + 1);
     for (var i = 0, x = spread; i < window.dancers.length; i++, x = x + spread) {
       window.dancers[i].lineUp(x);
