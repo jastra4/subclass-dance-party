@@ -1,5 +1,22 @@
 $(document).ready(function() {
   window.dancers = [];
+  $('.lineUp').on('click', function(event) {
+    console.log($('body').width());
+    var spread = $(window).width() / (window.dancers.length + 1);
+    for (var i = 0, x = spread; i < window.dancers.length; i++, x = x + spread) {
+      window.dancers[i].lineUp(x);
+      //console.log(x);
+    }
+  });
+
+  $('.scatter').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      var x = $("body").width() * Math.random();
+      var y = $("body").height() * Math.random();
+      window.dancers[i].scatter(y, x);
+      //console.log(x);
+    }
+  });
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer

@@ -6,6 +6,15 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   this.setPosition(top, left);
   this._timeBetweenSteps = timeBetweenSteps;
   this.step();
+  window.dancers.push(this);
+};
+
+MakeDancer.prototype.lineUp = function(left) {
+  this.setPosition($(window).height() / 2, left);
+};
+
+MakeDancer.prototype.scatter = function (top, left) {
+  this.setPosition(top, left);
 };
 
 MakeDancer.prototype.step = function() {

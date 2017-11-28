@@ -51,6 +51,15 @@ body, a:link, a:visited, a:active{
   left: 300px;
   text-align: center;
 }
+.lineUp{
+  padding:5px 12px;
+  float:right;
+}
+
+.scatter {
+  padding:5px 12px;
+  float:right;
+}
 
 #banner {
   margin: 0px;
