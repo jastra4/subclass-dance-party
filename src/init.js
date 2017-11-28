@@ -7,13 +7,21 @@ $(document).ready(function() {
     $('.delete').remove();
   });
 
-  $('span').on('click', function(event) {
-    console.log('test');
-    $('span').toggleClass('reaction');
-  });
-  $('.purple').on('mouseleave', function(event) {
-    $(this).toggleClass('reaction');
-  });
+  $('body').on('click', '.purple', function() {
+
+    $('body').on('mouseleave','.purple', function(event) {
+      //console.log(event.pageX + ", " + event.pageY);
+      //$(this).toggleClass('reaction');
+      $(this).remove();
+      //var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+      //var dancerMakerFunction = window[dancerMakerFunctionName];    
+      //var dancer = new dancerMakerFunction(event.pageX, event.pageY, Math.random() * 1000);
+      var dancer = new MakePurpleDancer(event.pageY-60, event.pageX-90, Math.random() * 1000);
+      $('body').append(dancer.$node);
+    });
+
+  });  
+
 
   $('.lineUp').on('click', function(event) {
     //console.log($('body').width());

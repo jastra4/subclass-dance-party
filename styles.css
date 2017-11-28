@@ -68,7 +68,8 @@ body, a:link, a:visited, a:active{
   float:right;
 }
 .reaction {
-  background-color: black
+  background-color: gold;
+  height: 400;
 }
 
 #banner {
