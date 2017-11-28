@@ -4,6 +4,8 @@ body, html{
 body{
   margin: 0px;
   background-image: url(https://pbs.twimg.com/media/B1TGBQNCEAAEDCz.jpg:large);
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
   /*background-color: white;*/
   font-size: 18px;
 }
@@ -57,6 +59,11 @@ body, a:link, a:visited, a:active{
 }
 
 .scatter {
+  padding:5px 12px;
+  float:right;
+}
+
+.clear {
   padding:5px 12px;
   float:right;
 }

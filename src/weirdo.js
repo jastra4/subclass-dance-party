@@ -1,6 +1,6 @@
 var Weirdo = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="purple"><img id="lady" src="http://i0.kym-cdn.com/photos/images/original/000/993/253/a0d.gif"></span>');
+  this.$node = $('<span class="purple delete"><img id="lady" src="http://i0.kym-cdn.com/photos/images/original/000/993/253/a0d.gif"></span>');
   MakeDancer.prototype.setPosition.call(this, top, left);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,

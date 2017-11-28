@@ -1,5 +1,16 @@
 $(document).ready(function() {
   window.dancers = [];
+
+  $('.clear').on('click', function (event) {
+    window.dancers = [];
+    console.log('test');
+    $('.delete').remove();
+  });
+
+  $('.lineUp').on('mouseover', function(event) {
+
+  });
+
   $('.lineUp').on('click', function(event) {
     console.log($('body').width());
     var spread = $(window).width() / (window.dancers.length + 1);
@@ -49,8 +60,5 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
-  $('#clear').on('click', function (event) {
-    $('span').remove();
-  })
 });
 
