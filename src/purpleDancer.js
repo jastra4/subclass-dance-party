@@ -2,7 +2,7 @@ var MakePurpleDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="purple delete"><img id="lady" src="http://i0.kym-cdn.com/photos/images/original/000/993/254/70f.gif"></span>');
   MakeDancer.prototype.setPosition.call(this, top, left);
-
+  MakeDancer.prototype.checkDistance.call(this);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 };

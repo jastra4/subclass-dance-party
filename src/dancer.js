@@ -5,8 +5,29 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer delete"></span>');
   this.setPosition(top, left);
   this._timeBetweenSteps = timeBetweenSteps;
+  this.top = top;
+  this.left = left;
   this.step();
+  this.checkDistance();
   window.dancers.push(this);
+};
+
+MakeDancer.prototype.checkDistance = function () {
+  var there = this;
+  if (window.bob) {
+    console.log(there);
+    console.log(window.bob);
+    console.log(window.bob.top, window.bob.left, this.top, this.left);
+    var distance = Math.sqrt((Math.pow(window.bob.top - this.top), 2) + (Math.pow(window.bob.left - this.left), 2));
+    //console.log(this.top, this.left);
+    
+    console.log('the dist is: ', distance);
+    //console.log(window.bob.top);
+    // pythagoreans theorem
+    //this.setPosition();
+  }
+  
+  setTimeout(function () { there.checkDistance(); }, 1000);
 };
 
 MakeDancer.prototype.lineUp = function(left) {

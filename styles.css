@@ -40,19 +40,6 @@ body, a:link, a:visited, a:active{
   width: 200px;
 }
 
-#annoying {
-  border-radius: 10px;
-  font-weight:100; 
-  background: rgba(0,0,0,0.3);
-  color: white;
-  padding: 10px;
-  width: 50%;
-  margin:5px;
-  position: absolute;
-  top: 30px;
-  left: 300px;
-  text-align: center;
-}
 .lineUp{
   padding:5px 12px;
   float:right;
@@ -79,7 +66,10 @@ body, a:link, a:visited, a:active{
   font-weight: bold;
   font-style: italic;
 }
-
+#bobby {
+  height: 500px;
+  width: 200px;
+}
 
 
 

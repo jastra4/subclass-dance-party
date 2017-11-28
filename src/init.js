@@ -1,5 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.postiions = [];
+  //window.bob = {};
 
   $('.clear').on('click', function (event) {
     window.dancers = [];
@@ -9,14 +11,14 @@ $(document).ready(function() {
 
   $('body').on('click', '.purple', function() {
 
-    $('body').on('mouseleave','.purple', function(event) {
+    $('body').on('mouseleave', '.purple', function(event) {
       //console.log(event.pageX + ", " + event.pageY);
       //$(this).toggleClass('reaction');
       $(this).remove();
       //var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
       //var dancerMakerFunction = window[dancerMakerFunctionName];    
       //var dancer = new dancerMakerFunction(event.pageX, event.pageY, Math.random() * 1000);
-      var dancer = new MakePurpleDancer(event.pageY-60, event.pageX-90, Math.random() * 1000);
+      var dancer = new MakePurpleDancer(event.pageY - 60, event.pageX - 90);
       $('body').append(dancer.$node);
     });
 
@@ -61,7 +63,9 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
+    if (dancerMakerFunction === Bob) {
+      window.bob = {top: 700, left: 50};
+    }
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
